@@ -1,0 +1,37 @@
+#  Application : Calcul des polynôme
+
+#Partie 1 : Listes chainées
+
+1) Donnez la déclaration des types et opérations relatifs à une liste simplement chainée dont les éléments ont de type générique element_t
+    La liste sera représentée par :
+    - la tête : @ du 1er élement
+    - la queue : @ du dernier élement
+    - la longueur : nombre des éléments
+
+2) Donnez l'implémentation des différentes opérations
+
+element_t:
+    ->Dépend de la situation
+
+Liste :
+    ->Tete
+    ->queue
+    ->longueur
+
+Noeud :
+    ->element_t
+    ->next
+
+   
+#Partie 2 : Polynômes
+
+3) Modélisez et appliquez ce type abstrait de données pour réliser les opération de calcul sur les polynômes à coefficients réels constant
+    ->Créer
+    ->Insérer un mônome
+    ->Afficher : P(x) = a0 + a1*X^1 + a2*X^2 + ... + an*X^n
+    ->Addition
+    ->Produit
+    ->Dérivée
+    ->Primitive
+
++++ NB : les monômes sont ordonnées par ordre croissant de leur degrès ++

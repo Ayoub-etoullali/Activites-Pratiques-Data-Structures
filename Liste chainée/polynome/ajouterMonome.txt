@@ -1,0 +1,23 @@
+Poly * ajouterMonome( Poly * monPoly , float coef , int exp ){
+
+    if ( monPoly == NULL ) return creerMonome( coef , exp ); // si monPoly est nul , alors la somme serait just un monome
+    else {
+        if ( exp > monPoly->exp ) {
+            Poly * P = creerMonome( coef , exp );
+            P->suivant = monPoly;
+            return P;
+        }
+        else {
+                Poly * R = monPoly;
+                while ( R->suivant != NULL && R->suivant->exp > exp ) R = R->suivant;
+            // POUR SIMPLIFIER L EXPRESSION
+                if ( R->suivant != NULL && R->suivant->exp = exp ) R->suivant->coef += coef;
+                else {
+                    Poly * P = creerMonome( coef , exp );
+                    P->suivant = R->suivant;
+                    R->suivant = P;
+                }
+                return monPoly;
+         }
+    }
+}
